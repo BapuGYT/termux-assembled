@@ -1,1 +1,1 @@
-⚠️I don't own anything in this repository, i have assembled arm64 varient of termux and .arr files of terminal-emulator, terminal-view, termux-shared. Use if you want I don't take any responsibility if anything goes wrong 
+⚠️I don't own anything in this repository, i have assembled arm64 varient of termux and .aar files of terminal-emulator, terminal-view, termux-shared. Use if you want I don't take any responsibility if anything goes wrong 
