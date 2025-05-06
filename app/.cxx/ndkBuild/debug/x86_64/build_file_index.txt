@@ -1,0 +1,1 @@
+/root/termux-app/app/src/main/cpp/Android.mk

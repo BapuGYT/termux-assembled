@@ -1,0 +1,440 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.termux"
+4    android:installLocation="internalOnly"
+5    android:sharedUserId="com.termux"
+6    android:sharedUserLabel="@string/shared_user_label"
+7    android:versionCode="118"
+8    android:versionName="0.118.0" >
+9
+10    <uses-sdk
+11        android:minSdkVersion="21"
+11-->/root/termux-app/app/src/main/AndroidManifest.xml
+12        android:targetSdkVersion="28" />
+12-->/root/termux-app/app/src/main/AndroidManifest.xml
+13
+14    <uses-feature
+14-->/root/termux-app/app/src/main/AndroidManifest.xml:9:5-11:36
+15        android:name="android.hardware.touchscreen"
+15-->/root/termux-app/app/src/main/AndroidManifest.xml:10:9-52
+16        android:required="false" />
+16-->/root/termux-app/app/src/main/AndroidManifest.xml:11:9-33
+17    <uses-feature
+17-->/root/termux-app/app/src/main/AndroidManifest.xml:12:5-14:36
+18        android:name="android.software.leanback"
+18-->/root/termux-app/app/src/main/AndroidManifest.xml:13:9-49
+19        android:required="false" />
+19-->/root/termux-app/app/src/main/AndroidManifest.xml:14:9-33
+20
+21    <permission
+22        android:name="com.termux.permission.RUN_COMMAND"
+22-->/root/termux-app/app/src/main/AndroidManifest.xml:17:9-69
+23        android:description="@string/permission_run_command_description"
+23-->/root/termux-app/app/src/main/AndroidManifest.xml:18:9-73
+24        android:icon="@mipmap/ic_launcher"
+24-->/root/termux-app/app/src/main/AndroidManifest.xml:19:9-43
+25        android:label="@string/permission_run_command_label"
+25-->/root/termux-app/app/src/main/AndroidManifest.xml:20:9-61
+26        android:protectionLevel="dangerous" />
+26-->/root/termux-app/app/src/main/AndroidManifest.xml:21:9-44
+27
+28    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+28-->/root/termux-app/app/src/main/AndroidManifest.xml:23:5-79
+28-->/root/termux-app/app/src/main/AndroidManifest.xml:23:22-76
+29    <uses-permission android:name="android.permission.INTERNET" />
+29-->/root/termux-app/app/src/main/AndroidManifest.xml:24:5-67
+29-->/root/termux-app/app/src/main/AndroidManifest.xml:24:22-64
+30    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+30-->/root/termux-app/app/src/main/AndroidManifest.xml:25:5-80
+30-->/root/termux-app/app/src/main/AndroidManifest.xml:25:22-77
+31    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+31-->/root/termux-app/app/src/main/AndroidManifest.xml:26:5-81
+31-->/root/termux-app/app/src/main/AndroidManifest.xml:26:22-78
+32    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+32-->/root/termux-app/app/src/main/AndroidManifest.xml:27:5-111
+32-->/root/termux-app/app/src/main/AndroidManifest.xml:27:22-79
+33    <uses-permission android:name="android.permission.WAKE_LOCK" />
+33-->/root/termux-app/app/src/main/AndroidManifest.xml:28:5-68
+33-->/root/termux-app/app/src/main/AndroidManifest.xml:28:22-65
+34    <uses-permission android:name="android.permission.VIBRATE" />
+34-->/root/termux-app/app/src/main/AndroidManifest.xml:29:5-66
+34-->/root/termux-app/app/src/main/AndroidManifest.xml:29:22-63
+35    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+35-->/root/termux-app/app/src/main/AndroidManifest.xml:30:5-77
+35-->/root/termux-app/app/src/main/AndroidManifest.xml:30:22-74
+36    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+36-->/root/termux-app/app/src/main/AndroidManifest.xml:31:5-95
+36-->/root/termux-app/app/src/main/AndroidManifest.xml:31:22-92
+37    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+37-->/root/termux-app/app/src/main/AndroidManifest.xml:32:5-78
+37-->/root/termux-app/app/src/main/AndroidManifest.xml:32:22-75
+38    <uses-permission android:name="android.permission.READ_LOGS" />
+38-->/root/termux-app/app/src/main/AndroidManifest.xml:33:5-68
+38-->/root/termux-app/app/src/main/AndroidManifest.xml:33:22-65
+39    <uses-permission android:name="android.permission.DUMP" />
+39-->/root/termux-app/app/src/main/AndroidManifest.xml:34:5-63
+39-->/root/termux-app/app/src/main/AndroidManifest.xml:34:22-60
+40    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+40-->/root/termux-app/app/src/main/AndroidManifest.xml:35:5-80
+40-->/root/termux-app/app/src/main/AndroidManifest.xml:35:22-77
+41    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+41-->/root/termux-app/app/src/main/AndroidManifest.xml:36:5-83
+41-->/root/termux-app/app/src/main/AndroidManifest.xml:36:22-80
+42    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+42-->/root/termux-app/app/src/main/AndroidManifest.xml:37:5-81
+42-->/root/termux-app/app/src/main/AndroidManifest.xml:37:22-78
+43    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+43-->/root/termux-app/app/src/main/AndroidManifest.xml:38:5-114
+43-->/root/termux-app/app/src/main/AndroidManifest.xml:38:22-75
+44    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+44-->/root/termux-app/app/src/main/AndroidManifest.xml:39:5-78
+44-->/root/termux-app/app/src/main/AndroidManifest.xml:39:22-75
+45    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+46
+47    <application
+47-->/root/termux-app/app/src/main/AndroidManifest.xml:41:5-235:19
+48        android:name="com.termux.app.TermuxApplication"
+48-->/root/termux-app/app/src/main/AndroidManifest.xml:42:9-46
+49        android:allowBackup="false"
+49-->/root/termux-app/app/src/main/AndroidManifest.xml:43:9-36
+50        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+50-->[androidx.core:core:1.6.0] /root/.gradle/caches/transforms-3/9f18c6b50baa776d71894ad120630276/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+51        android:banner="@drawable/banner"
+51-->/root/termux-app/app/src/main/AndroidManifest.xml:44:9-42
+52        android:extractNativeLibs="true"
+52-->/root/termux-app/app/src/main/AndroidManifest.xml:45:9-41
+53        android:icon="@mipmap/ic_launcher"
+53-->/root/termux-app/app/src/main/AndroidManifest.xml:46:9-43
+54        android:label="@string/application_name"
+54-->/root/termux-app/app/src/main/AndroidManifest.xml:47:9-49
+55        android:requestLegacyExternalStorage="true"
+55-->/root/termux-app/app/src/main/AndroidManifest.xml:48:9-52
+56        android:roundIcon="@mipmap/ic_launcher_round"
+56-->/root/termux-app/app/src/main/AndroidManifest.xml:49:9-54
+57        android:supportsRtl="false"
+57-->/root/termux-app/app/src/main/AndroidManifest.xml:50:9-36
+58        android:theme="@style/Theme.TermuxApp.DayNight.DarkActionBar" >
+58-->/root/termux-app/app/src/main/AndroidManifest.xml:51:9-70
+59        <activity
+59-->/root/termux-app/app/src/main/AndroidManifest.xml:54:9-77:20
+60            android:name="com.termux.app.TermuxActivity"
+60-->/root/termux-app/app/src/main/AndroidManifest.xml:55:13-47
+61            android:configChanges="orientation|screenSize|smallestScreenSize|density|screenLayout|keyboard|keyboardHidden|navigation"
+61-->/root/termux-app/app/src/main/AndroidManifest.xml:57:13-134
+62            android:exported="true"
+62-->/root/termux-app/app/src/main/AndroidManifest.xml:56:13-36
+63            android:label="@string/application_name"
+63-->/root/termux-app/app/src/main/AndroidManifest.xml:58:13-53
+64            android:launchMode="singleTask"
+64-->/root/termux-app/app/src/main/AndroidManifest.xml:59:13-44
+65            android:resizeableActivity="true"
+65-->/root/termux-app/app/src/main/AndroidManifest.xml:60:13-46
+66            android:theme="@style/Theme.TermuxActivity.DayNight.NoActionBar" >
+66-->/root/termux-app/app/src/main/AndroidManifest.xml:61:13-77
+67            <intent-filter>
+67-->/root/termux-app/app/src/main/AndroidManifest.xml:63:13-67:29
+68                <action android:name="android.intent.action.MAIN" />
+68-->/root/termux-app/app/src/main/AndroidManifest.xml:64:17-69
+68-->/root/termux-app/app/src/main/AndroidManifest.xml:64:25-66
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+70-->/root/termux-app/app/src/main/AndroidManifest.xml:66:17-77
+70-->/root/termux-app/app/src/main/AndroidManifest.xml:66:27-74
+71            </intent-filter>
+72            <intent-filter>
+72-->/root/termux-app/app/src/main/AndroidManifest.xml:68:13-72:29
+73                <action android:name="android.intent.action.MAIN" />
+73-->/root/termux-app/app/src/main/AndroidManifest.xml:64:17-69
+73-->/root/termux-app/app/src/main/AndroidManifest.xml:64:25-66
+74
+75                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+75-->/root/termux-app/app/src/main/AndroidManifest.xml:71:17-86
+75-->/root/termux-app/app/src/main/AndroidManifest.xml:71:27-83
+76            </intent-filter>
+77
+78            <meta-data
+78-->/root/termux-app/app/src/main/AndroidManifest.xml:74:13-76:53
+79                android:name="android.app.shortcuts"
+79-->/root/termux-app/app/src/main/AndroidManifest.xml:75:17-53
+80                android:resource="@xml/shortcuts" />
+80-->/root/termux-app/app/src/main/AndroidManifest.xml:76:17-50
+81        </activity>
+82
+83        <activity-alias
+83-->/root/termux-app/app/src/main/AndroidManifest.xml:79:9-91:26
+84            android:name="com.termux.HomeActivity"
+84-->/root/termux-app/app/src/main/AndroidManifest.xml:80:13-41
+85            android:exported="true"
+85-->/root/termux-app/app/src/main/AndroidManifest.xml:81:13-36
+86            android:targetActivity="com.termux.app.TermuxActivity" >
+86-->/root/termux-app/app/src/main/AndroidManifest.xml:82:13-57
+87
+88            <!-- Launch activity automatically on boot on Android Things devices -->
+89            <intent-filter>
+89-->/root/termux-app/app/src/main/AndroidManifest.xml:85:13-90:29
+90                <action android:name="android.intent.action.MAIN" />
+90-->/root/termux-app/app/src/main/AndroidManifest.xml:64:17-69
+90-->/root/termux-app/app/src/main/AndroidManifest.xml:64:25-66
+91
+92                <category android:name="android.intent.category.IOT_LAUNCHER" />
+92-->/root/termux-app/app/src/main/AndroidManifest.xml:88:17-81
+92-->/root/termux-app/app/src/main/AndroidManifest.xml:88:27-78
+93                <category android:name="android.intent.category.DEFAULT" />
+93-->/root/termux-app/app/src/main/AndroidManifest.xml:89:17-76
+93-->/root/termux-app/app/src/main/AndroidManifest.xml:89:27-73
+94            </intent-filter>
+95        </activity-alias>
+96
+97        <activity
+97-->/root/termux-app/app/src/main/AndroidManifest.xml:93:9-99:35
+98            android:name="com.termux.app.activities.HelpActivity"
+98-->/root/termux-app/app/src/main/AndroidManifest.xml:94:13-56
+99            android:exported="false"
+99-->/root/termux-app/app/src/main/AndroidManifest.xml:95:13-37
+100            android:label="@string/application_name"
+100-->/root/termux-app/app/src/main/AndroidManifest.xml:96:13-53
+101            android:parentActivityName="com.termux.app.TermuxActivity"
+101-->/root/termux-app/app/src/main/AndroidManifest.xml:97:13-61
+102            android:resizeableActivity="true" />
+102-->/root/termux-app/app/src/main/AndroidManifest.xml:98:13-46
+103        <activity
+103-->/root/termux-app/app/src/main/AndroidManifest.xml:101:9-105:75
+104            android:name="com.termux.app.activities.SettingsActivity"
+104-->/root/termux-app/app/src/main/AndroidManifest.xml:102:13-60
+105            android:exported="true"
+105-->/root/termux-app/app/src/main/AndroidManifest.xml:103:13-36
+106            android:label="@string/title_activity_termux_settings"
+106-->/root/termux-app/app/src/main/AndroidManifest.xml:104:13-67
+107            android:theme="@style/Theme.TermuxApp.DayNight.NoActionBar" />
+107-->/root/termux-app/app/src/main/AndroidManifest.xml:105:13-72
+108        <activity
+108-->/root/termux-app/app/src/main/AndroidManifest.xml:107:9-110:57
+109            android:name="com.termux.shared.activities.ReportActivity"
+109-->/root/termux-app/app/src/main/AndroidManifest.xml:108:13-61
+110            android:documentLaunchMode="intoExisting"
+110-->/root/termux-app/app/src/main/AndroidManifest.xml:110:13-54
+111            android:theme="@style/Theme.MarkdownViewActivity.DayNight" />
+111-->/root/termux-app/app/src/main/AndroidManifest.xml:109:13-71
+112        <activity
+113            android:name="com.termux.app.api.file.FileReceiverActivity"
+113-->/root/termux-app/app/src/main/AndroidManifest.xml:113:13-62
+114            android:excludeFromRecents="true"
+114-->/root/termux-app/app/src/main/AndroidManifest.xml:114:13-46
+115            android:exported="false"
+115-->/root/termux-app/app/src/main/AndroidManifest.xml:115:13-37
+116            android:noHistory="true"
+116-->/root/termux-app/app/src/main/AndroidManifest.xml:116:13-37
+117            android:resizeableActivity="true"
+117-->/root/termux-app/app/src/main/AndroidManifest.xml:117:13-46
+118            android:taskAffinity="com.termux.filereceiver" >
+118-->/root/termux-app/app/src/main/AndroidManifest.xml:118:13-71
+119        </activity>
+120
+121        <activity-alias
+121-->/root/termux-app/app/src/main/AndroidManifest.xml:143:9-160:26
+122            android:name="com.termux.app.api.file.FileViewReceiverActivity"
+122-->/root/termux-app/app/src/main/AndroidManifest.xml:144:13-66
+123            android:exported="true"
+123-->/root/termux-app/app/src/main/AndroidManifest.xml:145:13-36
+124            android:targetActivity="com.termux.app.api.file.FileReceiverActivity" >
+124-->/root/termux-app/app/src/main/AndroidManifest.xml:146:13-72
+125
+126            <!-- Accept multiple file types to let Termux be usable as generic file viewer. -->
+127            <intent-filter>
+127-->/root/termux-app/app/src/main/AndroidManifest.xml:149:13-159:29
+128                <action android:name="android.intent.action.VIEW" />
+128-->/root/termux-app/app/src/main/AndroidManifest.xml:150:17-69
+128-->/root/termux-app/app/src/main/AndroidManifest.xml:150:25-66
+129
+130                <category android:name="android.intent.category.DEFAULT" />
+130-->/root/termux-app/app/src/main/AndroidManifest.xml:89:17-76
+130-->/root/termux-app/app/src/main/AndroidManifest.xml:89:27-73
+131
+132                <data android:mimeType="application/*" />
+132-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+132-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+133                <data android:mimeType="audio/*" />
+133-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+133-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+134                <data android:mimeType="image/*" />
+134-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+134-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+135                <data android:mimeType="text/*" />
+135-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+135-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+136                <data android:mimeType="video/*" />
+136-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+136-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+137            </intent-filter>
+138        </activity-alias>
+139        <activity-alias
+139-->/root/termux-app/app/src/main/AndroidManifest.xml:122:9-141:26
+140            android:name="com.termux.app.api.file.FileShareReceiverActivity"
+140-->/root/termux-app/app/src/main/AndroidManifest.xml:123:13-67
+141            android:exported="true"
+141-->/root/termux-app/app/src/main/AndroidManifest.xml:124:13-36
+142            android:targetActivity="com.termux.app.api.file.FileReceiverActivity" >
+142-->/root/termux-app/app/src/main/AndroidManifest.xml:125:13-72
+143
+144            <!-- Accept multiple file types when sending. -->
+145            <intent-filter>
+145-->/root/termux-app/app/src/main/AndroidManifest.xml:128:13-140:29
+146                <action android:name="android.intent.action.SEND" />
+146-->/root/termux-app/app/src/main/AndroidManifest.xml:129:17-69
+146-->/root/termux-app/app/src/main/AndroidManifest.xml:129:25-66
+147
+148                <category android:name="android.intent.category.DEFAULT" />
+148-->/root/termux-app/app/src/main/AndroidManifest.xml:89:17-76
+148-->/root/termux-app/app/src/main/AndroidManifest.xml:89:27-73
+149
+150                <data android:mimeType="application/*" />
+150-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+150-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+151                <data android:mimeType="audio/*" />
+151-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+151-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+152                <data android:mimeType="image/*" />
+152-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+152-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+153                <data android:mimeType="message/*" />
+153-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+153-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+154                <data android:mimeType="multipart/*" />
+154-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+154-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+155                <data android:mimeType="text/*" />
+155-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+155-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+156                <data android:mimeType="video/*" />
+156-->/root/termux-app/app/src/main/AndroidManifest.xml:133:17-58
+156-->/root/termux-app/app/src/main/AndroidManifest.xml:133:23-55
+157            </intent-filter>
+158        </activity-alias>
+159
+160        <provider
+161            android:name="com.termux.filepicker.TermuxDocumentsProvider"
+161-->/root/termux-app/app/src/main/AndroidManifest.xml:163:13-63
+162            android:authorities="com.termux.documents"
+162-->/root/termux-app/app/src/main/AndroidManifest.xml:164:13-67
+163            android:exported="true"
+163-->/root/termux-app/app/src/main/AndroidManifest.xml:165:13-36
+164            android:grantUriPermissions="true"
+164-->/root/termux-app/app/src/main/AndroidManifest.xml:166:13-47
+165            android:permission="android.permission.MANAGE_DOCUMENTS" >
+165-->/root/termux-app/app/src/main/AndroidManifest.xml:167:13-69
+166            <intent-filter>
+166-->/root/termux-app/app/src/main/AndroidManifest.xml:168:13-170:29
+167                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+167-->/root/termux-app/app/src/main/AndroidManifest.xml:169:17-84
+167-->/root/termux-app/app/src/main/AndroidManifest.xml:169:25-81
+168            </intent-filter>
+169        </provider>
+170        <provider
+171            android:name="com.termux.app.TermuxOpenReceiver$ContentProvider"
+171-->/root/termux-app/app/src/main/AndroidManifest.xml:174:13-67
+172            android:authorities="com.termux.files"
+172-->/root/termux-app/app/src/main/AndroidManifest.xml:175:13-63
+173            android:exported="true"
+173-->/root/termux-app/app/src/main/AndroidManifest.xml:176:13-36
+174            android:grantUriPermissions="true"
+174-->/root/termux-app/app/src/main/AndroidManifest.xml:177:13-47
+175            android:permission="com.termux.permission.RUN_COMMAND" />
+175-->/root/termux-app/app/src/main/AndroidManifest.xml:178:13-79
+176
+177        <receiver
+177-->/root/termux-app/app/src/main/AndroidManifest.xml:181:9-183:40
+178            android:name="com.termux.app.TermuxOpenReceiver"
+178-->/root/termux-app/app/src/main/AndroidManifest.xml:182:13-51
+179            android:exported="false" />
+179-->/root/termux-app/app/src/main/AndroidManifest.xml:183:13-37
+180        <receiver
+180-->/root/termux-app/app/src/main/AndroidManifest.xml:185:9-191:20
+181            android:name="com.termux.app.event.SystemEventReceiver"
+181-->/root/termux-app/app/src/main/AndroidManifest.xml:186:13-58
+182            android:exported="false" >
+182-->/root/termux-app/app/src/main/AndroidManifest.xml:187:13-37
+183            <intent-filter>
+183-->/root/termux-app/app/src/main/AndroidManifest.xml:188:13-190:29
+184                <action android:name="android.intent.action.BOOT_COMPLETED" />
+184-->/root/termux-app/app/src/main/AndroidManifest.xml:189:17-79
+184-->/root/termux-app/app/src/main/AndroidManifest.xml:189:25-76
+185            </intent-filter>
+186        </receiver>
+187        <receiver
+187-->/root/termux-app/app/src/main/AndroidManifest.xml:193:9-195:40
+188            android:name="com.termux.shared.activities.ReportActivity$ReportActivityBroadcastReceiver"
+188-->/root/termux-app/app/src/main/AndroidManifest.xml:194:13-93
+189            android:exported="false" />
+189-->/root/termux-app/app/src/main/AndroidManifest.xml:195:13-37
+190
+191        <service
+191-->/root/termux-app/app/src/main/AndroidManifest.xml:198:9-200:40
+192            android:name="com.termux.app.TermuxService"
+192-->/root/termux-app/app/src/main/AndroidManifest.xml:199:13-46
+193            android:exported="false" />
+193-->/root/termux-app/app/src/main/AndroidManifest.xml:200:13-37
+194        <service
+195            android:name="com.termux.app.RunCommandService"
+195-->/root/termux-app/app/src/main/AndroidManifest.xml:203:13-50
+196            android:exported="true"
+196-->/root/termux-app/app/src/main/AndroidManifest.xml:204:13-36
+197            android:permission="com.termux.permission.RUN_COMMAND" >
+197-->/root/termux-app/app/src/main/AndroidManifest.xml:205:13-79
+198            <intent-filter>
+198-->/root/termux-app/app/src/main/AndroidManifest.xml:206:13-208:29
+199                <action android:name="com.termux.RUN_COMMAND" />
+199-->/root/termux-app/app/src/main/AndroidManifest.xml:207:25-74
+200            </intent-filter>
+201        </service>
+202
+203        <!--
+204        This (or rather, value 2.1 or higher) is needed to make the Samsung Galaxy S8 mark the
+205        app with "This app is optimized to run in full screen."
+206        -->
+207        <meta-data
+207-->/root/termux-app/app/src/main/AndroidManifest.xml:214:9-216:36
+208            android:name="android.max_aspect"
+208-->/root/termux-app/app/src/main/AndroidManifest.xml:215:13-46
+209            android:value="10.0" />
+209-->/root/termux-app/app/src/main/AndroidManifest.xml:216:13-33
+210
+211        <!-- https://developer.samsung.com/samsung-dex/modify-optimizing.html -->
+212
+213
+214        <!-- Version < 3.0. DeX Mode and Screen Mirroring support -->
+215        <meta-data
+215-->/root/termux-app/app/src/main/AndroidManifest.xml:222:9-224:36
+216            android:name="com.samsung.android.keepalive.density"
+216-->/root/termux-app/app/src/main/AndroidManifest.xml:223:13-65
+217            android:value="true" />
+217-->/root/termux-app/app/src/main/AndroidManifest.xml:224:13-33
+218
+219        <!-- Version >= 3.0. DeX Dual Mode support -->
+220        <meta-data
+220-->/root/termux-app/app/src/main/AndroidManifest.xml:227:9-229:36
+221            android:name="com.samsung.android.multidisplay.keep_process_alive"
+221-->/root/termux-app/app/src/main/AndroidManifest.xml:228:13-79
+222            android:value="true" />
+222-->/root/termux-app/app/src/main/AndroidManifest.xml:229:13-33
+223        <meta-data
+223-->/root/termux-app/app/src/main/AndroidManifest.xml:231:9-233:36
+224            android:name="com.sec.android.support.multiwindow"
+224-->/root/termux-app/app/src/main/AndroidManifest.xml:232:13-63
+225            android:value="true" />
+225-->/root/termux-app/app/src/main/AndroidManifest.xml:233:13-33
+226
+227        <uses-library
+227-->[androidx.window:window:1.0.0-alpha09] /root/.gradle/caches/transforms-3/58a7c01cea08920005d2495d48d3664b/transformed/window-1.0.0-alpha09/AndroidManifest.xml:25:9-27:40
+228            android:name="androidx.window.extensions"
+228-->[androidx.window:window:1.0.0-alpha09] /root/.gradle/caches/transforms-3/58a7c01cea08920005d2495d48d3664b/transformed/window-1.0.0-alpha09/AndroidManifest.xml:26:13-54
+229            android:required="false" />
+229-->[androidx.window:window:1.0.0-alpha09] /root/.gradle/caches/transforms-3/58a7c01cea08920005d2495d48d3664b/transformed/window-1.0.0-alpha09/AndroidManifest.xml:27:13-37
+230        <uses-library
+230-->[androidx.window:window:1.0.0-alpha09] /root/.gradle/caches/transforms-3/58a7c01cea08920005d2495d48d3664b/transformed/window-1.0.0-alpha09/AndroidManifest.xml:28:9-30:40
+231            android:name="androidx.window.sidecar"
+231-->[androidx.window:window:1.0.0-alpha09] /root/.gradle/caches/transforms-3/58a7c01cea08920005d2495d48d3664b/transformed/window-1.0.0-alpha09/AndroidManifest.xml:29:13-51
+232            android:required="false" />
+232-->[androidx.window:window:1.0.0-alpha09] /root/.gradle/caches/transforms-3/58a7c01cea08920005d2495d48d3664b/transformed/window-1.0.0-alpha09/AndroidManifest.xml:30:13-37
+233    </application>
+234
+235</manifest>
